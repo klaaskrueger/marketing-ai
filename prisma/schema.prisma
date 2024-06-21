@@ -1,14 +1,13 @@
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+
+}
+
 generator client {
   provider = "prisma-client-js"
 }
-
-datasource db {
-  provider     = "cockroachdb"
-  url          = env("DATABASE_URL")
-  relationMode = "prisma" 
-}
-  
-
 
 model LeadMagnet {
   id                     String    @id @default(uuid())
@@ -16,21 +15,21 @@ model LeadMagnet {
   name                   String
   status                 String
   slug                   String?
-  publishedTitle         String
-  draftTitle             String
-  publishedSubtitle      String
-  draftSubtitle          String
-  publishedPrompt        String
-  draftPrompt            String
-  publishedBody          String
-  draftBody              String
-  publishedFirstQuestion String
-  draftFirstQuestion     String
-  publishedEmailCapture  String
-  draftEmailCapture      String
+  publishedTitle         String    @db.Text
+  draftTitle             String    @db.Text
+  publishedSubtitle      String    @db.Text
+  draftSubtitle          String    @db.Text
+  publishedPrompt        String    @db.Text
+  draftPrompt            String    @db.Text
+  publishedBody          String    @db.Text
+  draftBody              String    @db.Text
+  publishedFirstQuestion String    @db.Text
+  draftFirstQuestion     String    @db.Text
+  publishedEmailCapture  String    @db.Text
+  draftEmailCapture      String    @db.Text
   createdAt              DateTime  @default(now())
   updatedAt              DateTime  @default(now())
-  publishedAt            DateTime?
+  publishedAt            DateTime? @db.DateTime
   pageViews              Int       @default(0)
   leads                  Lead[]
 
@@ -55,8 +54,8 @@ model Profile {
   id              String   @id @default(uuid())
   userId          String   @unique
   title           String
-  description     String
-  profileImageUrl String
+  description     String   @db.Text
+  profileImageUrl String   @db.Text
   createdAt       DateTime @default(now())
   updatedAt       DateTime @default(now())
 

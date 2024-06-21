@@ -2,6 +2,8 @@ const PrismaClient = require("@prisma/client").PrismaClient;
 
 const prisma = new PrismaClient();
 
+
+// creating dummy data
 const seed = async () => {
   await prisma.leadMagnet.create({
     data: {
@@ -21,7 +23,8 @@ const seed = async () => {
       publishedTitle: "This is a published title",
       slug: "lead-magnet-slug",
       status: "draft",
-      userId: "user_2WruMGsskRrt6HDECpRhzNyH1vp",
+
+      userId: "user_2g8cPqn0Aoi8so7Y7SBlQOedAvI",
     },
   });
 
@@ -31,13 +34,13 @@ const seed = async () => {
         name: "Dummy User 1",
         email: "dummy1@gmail.com",
         leadMagnetId: "123456789",
-        userId: "user_2WruMGsskRrt6HDECpRhzNyH1vp",
+        userId: "user_2g8cPqn0Aoi8so7Y7SBlQOedAvI",
       },
       {
         name: "Dummy User 2",
         email: "dummy2@gmail.com",
         leadMagnetId: "123456789",
-        userId: "user_2WruMGsskRrt6HDECpRhzNyH1vp",
+        userId: "user_2g8cPqn0Aoi8so7Y7SBlQOedAvI",
       },
     ],
   });

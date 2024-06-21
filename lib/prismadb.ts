@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 
+//Making sure Just one Prisma instance is running
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
 };
