@@ -28,7 +28,7 @@ async function LeadMagnetEditorPage({ params }: LeadMagnetEditorParams) {
       },
     });
   }
-
+// If no leadmagnet is found  the user is guided to the leadmagnet overview Page
   if (!leadMagnet) {
     return <LeadMagnetNotFound returnLink="/leadmagnets" />;
   }

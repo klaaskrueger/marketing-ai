@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 const seed = async () => {
   await prisma.leadMagnet.create({
     data: {
-      id: "123456789",
+      id: "2",
       draftBody: "This is a draft body",
       draftEmailCapture: "This is a draft email capture",
       draftFirstQuestion: "This is a draft first question",

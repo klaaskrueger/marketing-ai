@@ -15,8 +15,8 @@ async function handleRequest(
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
   }
 
-  const userId = user.id;
-
+  const userId = user.id; 
+console.log("klaastest", "user", user) 
   const requestBody = await request.json();
   const parsed = schema.safeParse(requestBody);
 

@@ -1,3 +1,6 @@
+
+// Default Leadmagnet
+
 import { LeadMagnet } from "@prisma/client";
 
 export const DEFAULT_LEAD_MAGNET: LeadMagnet = {

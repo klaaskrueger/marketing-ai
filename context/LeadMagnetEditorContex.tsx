@@ -53,7 +53,7 @@ export const LeadMagnetEditorContextProvider = ({
       });
 
       if (response.data.data) {
-        toast.success("Lead Magnet saved successfully");
+        toast.success("Lead Magnet Daten gespeichert");
       }
     } catch (error) {
       toast.error("Failed to save Lead Magnet");

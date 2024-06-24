@@ -34,7 +34,7 @@ function LeadMagnetEditorNavbar() {
   const saveName = async () => {
     try {
       await saveLeadMagnet();
-      toast.success("Saved!"); // TODO:
+      toast.success("Saved!"); 
       setEditing(false);
     } catch (error) {
       console.log(error);
